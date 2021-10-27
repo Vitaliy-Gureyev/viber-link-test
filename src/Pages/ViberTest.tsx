@@ -3,16 +3,16 @@ import './viberTest.scss'
 
 const viberLinks = [{
     title: 'viber 1',
-    link: 'viber://forward?text=How%20to%20share%20any%20link%20on%20Viber%2C%20WhatsApp%20and%20more%20%C2%BB%20Amazing%20Tips247%20https%3A%2F%2Fwww.amazingtips247.co.uk%2F2016%2F04%2Fhow-to-share-any-link-with-viber.html'
+    link: 'How%20to%20share%20any%20link%20on%20Viber%2C%20WhatsApp%20and%20more%20%C2%BB%20Amazing%20Tips247%20https%3A%2F%2Fwww.amazingtips247.co.uk%2F2016%2F04%2Fhow-to-share-any-link-with-viber.html'
 },{
     title: 'viber 2',
-    link: 'viber://forward?text=How%20to%20share%20any%20link%20on%20Viber%20https://www.amazingtips247.co.uk/2016/04/how-to-share-any-link-with-viber.html'
+    link: 'How%20to%20share%20any%20link%20on%20Viber%20https://www.amazingtips247.co.uk/2016/04/how-to-share-any-link-with-viber.html'
 },{
     title: 'viber 3',
-    link: 'viber://forward?text=https://www.amazingtips247.co.uk/2016/04/how-to-share-any-link-with-viber.html'
+    link: 'https://www.amazingtips247.co.uk/2016/04/how-to-share-any-link-with-viber.html'
 },{
     title: 'viber 4',
-    link: 'viber://forward?text=https://www.dev2.briz.ua/ru/blog/russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkiirusskiirusskii-russkii-russkii#ankor-3'
+    link: 'https://www.dev2.briz.ua/ru/blog/russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkii-russkiirusskiirusskii-russkii-russkii#ankor-3'
 }]
 
 const ViberTest = () => {
@@ -23,7 +23,7 @@ const ViberTest = () => {
                     return (
                         <li className="subscribe-email__item-social">
                             <a
-                                href={encodeURIComponent(el.link)}
+                                href={`viber://forward?text=${encodeURIComponent(el.link)}`}
                                 className="subscribe-email__link-social"
                                 target="_blank"
                                 rel="noreferrer"
