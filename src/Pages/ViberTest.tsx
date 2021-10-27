@@ -23,7 +23,7 @@ const ViberTest = () => {
                     return (
                         <li className="subscribe-email__item-social">
                             <a
-                                href={el.link}
+                                href={encodeURIComponent(el.link)}
                                 className="subscribe-email__link-social"
                                 target="_blank"
                                 rel="noreferrer"
