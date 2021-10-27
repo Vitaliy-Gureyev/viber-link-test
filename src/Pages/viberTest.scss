@@ -1,0 +1,76 @@
+$color-text: #424242;
+$second-text: #b8b8b8;
+$color-active: #00a3a4;
+$color-error: #f44336;
+$roboto-regular: "Roboto-Regular", sans-serif;
+
+.subscribe-email {
+
+  &__list-socials {
+    margin-top: 25px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  &__text-social {
+    transition: .2s ease-in;
+
+  }
+
+  &__icon-social {
+    height: 50px;
+    width: 50px;
+    background: #F1F1F1;
+    border-radius: 5px;
+    position: relative;
+    transition: .2s ease-in;
+
+    &--viber {
+
+      &:before {
+        content: '';
+        background: url('../assets/viber_blog.svg') no-repeat center center/cover;
+        height: 36px;
+        width: 38px;
+        position: absolute;
+        transform: translate(15%, -50%);
+        top: 50%;
+      }
+    }
+  }
+
+  &__link-social {
+    color: $second-text;
+    font-family: $roboto-regular;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+    text-decoration: none;
+    width: 80px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      .subscribe-email__icon-social {
+        background: #E2E2E2;
+      }
+
+      .subscribe-email__text-social {
+        color: $color-text;
+      }
+    }
+  }
+
+  &__run-popup {
+    cursor: pointer;
+  }
+}
