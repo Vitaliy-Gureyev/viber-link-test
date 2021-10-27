@@ -16,21 +16,27 @@ const viberLinks = [{
 }]
 
 const ViberTest = () => {
+    const handleClick = (link:string) => {
+        // @ts-ignore
+        window.location = `viber://forward?text=${encodeURIComponent(link)}`
+    }
+    console.log(window.location.protocol)
     return (
         <div>
             <ul className="subscribe-email__list-socials">
                 {viberLinks.map(el => {
                     return (
                         <li className="subscribe-email__item-social">
-                            <a
-                                href={`viber://forward?text=${encodeURIComponent(el.link)}`}
+                            <div
                                 className="subscribe-email__link-social"
-                                target="_blank"
-                                rel="noreferrer"
+/*                                target="_blank"
+                                rel="noreferrer"*/
+                                onClick={e => handleClick(el.link)}
+                                key = {el.link}
                             >
                                 <span className="subscribe-email__icon-social subscribe-email__icon-social--viber" />
                                 <span className="subscribe-email__text-social">{el.title}</span>
-                            </a>
+                            </div>
                         </li>
                     )
                 })}
